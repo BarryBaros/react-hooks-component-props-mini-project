@@ -1,5 +1,4 @@
 import logo from "../assets/logo";
-import Header from "../components/Header";
 
 const blogData = {
   name: "Underreacted",
