@@ -1,17 +1,17 @@
 import React from "react";
+import Article from "./Article";
 
-function ArticleList() {
+function ArticleList({ posts }) {
     return (
         <main>
-            <h2>Articles</h2>
-            <ul>
-                <li>Article 1</li>
-                <li>Article 2</li>
-                <li>Article 3</li>
-                <li>Article 4</li>
-                <li>Article 5</li>
-                <li>Article 6</li>
-            </ul>
+            {posts.map((post) => (
+                <Article
+                    key={post.id}
+                    title={post.title}
+                    date={post.date}
+                    preview={post.preview}
+                />
+            ))}
         </main>
     )
 }
